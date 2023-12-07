@@ -177,7 +177,7 @@ class _HomePageState extends State<HomePage> {
                 children: radios!.map((e)=>ListTile(
                   leading: CircleAvatar(backgroundImage: NetworkImage(e.icon),
                   ),
-                  title: "${e.name}".text.white.make(),
+                  title: e.name.text.white.make(),
                   subtitle: e.tagline.text.white.make(),
                 )
                 ).toList(),
@@ -187,6 +187,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         body: Stack(
+          fit: StackFit.expand,
           children: [
             Builder(
               builder: (context) {
@@ -248,6 +249,8 @@ class _HomePageState extends State<HomePage> {
                           child: ZStack(
                     [
                       Positioned(
+                        top: 0.0,
+                        right: 0.0,
                         child: VxBox(
                                 child: rad.category.text.bold.uppercase.white
                                     .make()
@@ -257,8 +260,6 @@ class _HomePageState extends State<HomePage> {
                             .alignCenter
                             .withRounded(value: 10.0)
                             .make(),
-                        top: 0.0,
-                        right: 0.0,
                       ),
                       Align(
                         alignment: Alignment.bottomCenter,
@@ -274,7 +275,7 @@ class _HomePageState extends State<HomePage> {
                       Align(
                         alignment: Alignment.center,
                         child: [
-                          Icon(
+                          const Icon(
                             CupertinoIcons.play_circle,
                             color: Colors.white,
                             size: 51.0,
@@ -303,7 +304,7 @@ class _HomePageState extends State<HomePage> {
                   }).p16();
                 }).centered(),
             Container(
-              padding: EdgeInsets.only(top: 620.0),
+              padding: const EdgeInsets.only(top: 620.0),
               child: Align(
                 alignment: Alignment.bottomCenter,
                 child: [
@@ -332,7 +333,6 @@ class _HomePageState extends State<HomePage> {
               ),
             )
           ],
-          fit: StackFit.expand,
         ));
   }
 }
