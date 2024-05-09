@@ -14,7 +14,7 @@ class FancyCursor extends StatelessWidget {
         height: 120, // Cursor height
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
             colors: [Colors.pinkAccent, Colors.deepPurpleAccent],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -36,7 +36,7 @@ class FancyCursor extends StatelessWidget {
               child: Container(
                 width: 20,
                 height: 60,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20),

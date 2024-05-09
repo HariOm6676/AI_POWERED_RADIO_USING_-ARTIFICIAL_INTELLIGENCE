@@ -53,6 +53,9 @@
           serviceWorkerVersion: serviceWorkerVersion,
         },
         onEntrypointLoaded: function (engineInitializer) {
+          let config = {
+          renderer: useHtml ? "html" : "canvaskit",
+        };
           engineInitializer.initializeEngine().then(function (appRunner) {
             appRunner.runApp();
           });

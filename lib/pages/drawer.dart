@@ -41,12 +41,12 @@ class CustomDrawer extends StatelessWidget {
           children: [
             Container(
               height: 250,
-              color: Color.fromRGBO(80, 227, 194, 1),
+              color: const Color.fromRGBO(80, 227, 194, 1),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(
@@ -60,7 +60,7 @@ class CustomDrawer extends StatelessWidget {
                       style: GoogleFonts.dhurjati(
                         fontSize: 22.0,
                         fontWeight: FontWeight.bold,
-                        color: Color.fromRGBO(128, 0, 0, 1),
+                        color: const Color.fromRGBO(128, 0, 0, 1),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -78,13 +78,13 @@ class CustomDrawer extends StatelessWidget {
                               width: 3, // Adjust the border width as needed
                             ),
                           ),
-                          child: CircleAvatar(
+                          child: const CircleAvatar(
                             backgroundImage: AssetImage("images/profile.jpg"),
                             maxRadius: 51,
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             border: Border.all(
                               color: Colors.black,
@@ -101,19 +101,19 @@ class CustomDrawer extends StatelessWidget {
                               children: [
                                 Row(
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       CupertinoIcons
                                           .profile_circled, // Use the built-in Flutter icon
                                       color: Color.fromRGBO(128, 0, 0, 1),
                                       // Set the same orange color
                                     ),
-                                    SizedBox(width: 5),
+                                    const SizedBox(width: 5),
                                     Text(
                                       "Hari Om Shukla",
                                       style: GoogleFonts.libreBaskerville(
                                         fontSize: 15.0,
                                         fontWeight: FontWeight.bold,
-                                        color: Color.fromRGBO(128, 0, 0, 1),
+                                        color: const Color.fromRGBO(128, 0, 0, 1),
                                       ),
                                       textAlign: TextAlign.left,
                                     ),
@@ -124,13 +124,13 @@ class CustomDrawer extends StatelessWidget {
                                 Row(
                                   // Add a Row to display Icon and Text together
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons
                                           .code, // Use the built-in Flutter icon
                                       color: Color.fromRGBO(65, 0, 147, 1),
                                       // Set the same orange color
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                         width:
                                             5), // Add some spacing between icon and text
                                     Text(
@@ -138,7 +138,7 @@ class CustomDrawer extends StatelessWidget {
                                       style: GoogleFonts.dhurjati(
                                         fontSize: 20.0,
                                         fontWeight: FontWeight.normal,
-                                        color: Color.fromRGBO(65, 0, 147, 1),
+                                        color: const Color.fromRGBO(65, 0, 147, 1),
                                       ),
                                       textAlign: TextAlign.left,
                                     ),
@@ -147,19 +147,19 @@ class CustomDrawer extends StatelessWidget {
                                 Row(
                                   // Another Row for School icon and text
                                   children: [
-                                    Icon(
+                                    const Icon(
                                         Icons
                                             .school, // Use the built-in School icon
                                         color: Color.fromRGBO(65, 0, 147,
                                             1) // Set a contrasting deep red color
                                         ),
-                                    SizedBox(width: 5),
+                                    const SizedBox(width: 5),
                                     Text(
                                       "PSIT Kanpur",
                                       style: GoogleFonts.dhurjati(
                                         fontSize: 20.0,
                                         // fontWeight: FontWeight.bold,
-                                        color: Color.fromRGBO(65, 0, 147, 1),
+                                        color: const Color.fromRGBO(65, 0, 147, 1),
                                       ),
                                       textAlign: TextAlign.left,
                                     ),

@@ -183,7 +183,7 @@ class _HomePageState extends State<HomePage> {
     final screenHeight = mediaQueryData.size.height;
 
     return Scaffold(
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       body: Stack(
         fit: StackFit.expand,
         children: [
