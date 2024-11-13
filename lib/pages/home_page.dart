@@ -1,12 +1,25 @@
+import 'dart:convert';
+
 import 'package:alan_voice/alan_voice.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_1/pages/drawer.dart';
 import 'package:flutter_application_1/utils/ai_utils.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../model/radio.dart';
+
+class AppColors {
+  static const Color PrimaryColor = Color.fromRGBO(228, 237, 242, 1);
+  static const Color PrimaryColor5 = Color.fromRGBO(205, 226, 238, 1);
+  static const Color PrimaryColor1 = Color.fromRGBO(187, 220, 240, 1);
+  static const Color PrimaryColor2 = Color.fromRGBO(168, 218, 249, 1);
+  static const Color PrimaryColor3 = Color.fromRGBO(146, 210, 249, 1);
+  static const Color PrimaryColor4 = Color.fromRGBO(1, 31, 75, 1);
+}
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -65,7 +78,9 @@ class _HomePageState extends State<HomePage> {
     // TODO: implement initState
 
     super.initState();
-    setupAlan();
+    if (!kIsWeb) {
+      setupAlan();
+    }
     fetchRadios();
     _audioplayer.onPlayerStateChanged.listen((event) {
       if (event == PlayerState.playing) {
@@ -81,10 +96,18 @@ class _HomePageState extends State<HomePage> {
     AlanVoice.addButton(
         "e9dcb1a440267f5d725c71e312ea46da2e956eca572e1d8b807a3e2338fdd0dc/stage",
         buttonAlign: AlanVoice.BUTTON_ALIGN_RIGHT);
+    print("Inside alan");
     AlanVoice.callbacks.add((command) => _handleCommand(command.data));
   }
 
+  handleAlanCommand(String command) {
+    Map<String, dynamic> response = json.decode(command);
+    _handleCommand(response);
+  }
+
   _handleCommand(Map<String, dynamic> response) {
+    print("Insisde switch of handle command");
+
     switch (response["command"]) {
       case "play":
         _playMusic(_selectedRadio.url);
@@ -145,7 +168,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   _playMusic(String url) {
-    _audioplayer.play(UrlSource(url));
+    _audioplayer.play(AssetSource("assets/music/sad.mp3"));
     _selectedRadio = radios!.firstWhere(
       (item) => item.url == url,
     );
@@ -160,31 +183,7 @@ class _HomePageState extends State<HomePage> {
     final screenHeight = mediaQueryData.size.height;
 
     return Scaffold(
-      drawer: Drawer(
-        child: Container(
-          color: _selectedColor ?? AIColors.primaryColor2,
-          child: radios != null
-              ? [
-                  SizedBox(height: screenHeight * 0.05),
-                  "All Channels".text.xl.white.semiBold.make().px16(),
-                  SizedBox(height: screenHeight * 0.02),
-                  ListView(
-                    padding: EdgeInsets.zero,
-                    shrinkWrap: true,
-                    children: radios!
-                        .map((e) => ListTile(
-                              leading: CircleAvatar(
-                                backgroundImage: NetworkImage(e.icon),
-                              ),
-                              title: e.name.text.white.make(),
-                              subtitle: e.tagline.text.white.make(),
-                            ))
-                        .toList(),
-                  )
-                ].vStack()
-              : const Offstage(),
-        ),
-      ),
+      drawer: const CustomDrawer(),
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -230,8 +229,10 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: screenHeight * 0.02),
               VxSwiper.builder(
                   itemCount: radios != null ? radios!.length : 0,
-                  aspectRatio: 1.0,
+                  aspectRatio: kIsWeb ? 1.0 : 1.0,
+                  scrollDirection: Axis.horizontal,
                   enlargeCenterPage: true,
+                  height: kIsWeb ? screenHeight * 0.56 : screenHeight * 0.56,
                   onPageChanged: (index) {
                     _selectedRadio = radios![index];
                     final colorHex = radios![index].color;
@@ -321,6 +322,7 @@ class _HomePageState extends State<HomePage> {
                       if (_isPlaying) {
                         _audioplayer.stop();
                       } else {
+                        print(_selectedRadio.url);
                         _playMusic(_selectedRadio.url);
                       }
                     }),

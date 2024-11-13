@@ -1,0 +1,109 @@
+{
+    "radios": [
+        {
+            "id": 1,
+            "name": "92.7",
+            "tagline": "Get ready to headbang!",
+            "color": "0xffa11431",
+            "desc":  "Rock out with electrifying guitar riffs and pounding rhythms!",
+            "url": "http://mediaserv30.live-streams.nl:8086/live",
+            "icon": "https://mytuner.global.ssl.fastly.net/media/tvos_radios/m8afyszryaqt.png",
+            "image":  "https://images.pexels.com/photos/19964128/pexels-photo-19964128/free-photo-of-dj-at-party.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "lang": "Hindi",
+            "category": "rock",
+            "order": 1
+        },
+        {
+            "id": 2,
+            "name":"100.9",
+            
+            "tagline": "Groove to the beats!",
+            "color": "0xff221420",
+            "desc": "Experience the essence of urban culture and powerful lyrical flow.",
+            "url": "http://mediaserv33.live-streams.nl:8034/live",
+            "icon": "https://static.mytuner.mobi/media/tvos_radios/2z69hnevkvam.jpeg",
+            "image": "https://images.pexels.com/photos/5699509/pexels-photo-5699509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "lang": "Hindi",
+            "category": "HipHop",
+            "order":2
+        },
+        {
+            "id": 3,
+            "name": "102",
+            "tagline": "Play On!",
+            "color": "0xff04080b",
+            "desc": "Playing music regularly will physically alter your brain structure.",
+            "url": "http://mediaserv38.live-streams.nl:8006/live",
+            "icon": "http://db.radioline.fr/pictures/radio_1b34ac132310c975f847aed2a948a318/logo200.jpg?size=200",
+            "image": "https://img.freepik.com/free-photo/volumetric-musical-background-with-treble-clef-notes-generative-ai_169016-29576.jpg",
+            "lang": "English",
+            "category": "sad",
+            "order": 3
+        },
+        {
+            "id": 4,
+            "name": "104",
+            "tagline": "English Hits",
+            "color": "0xff066c53",
+            "desc": "",
+            "url": "http://mediaserv33.live-streams.nl:8036/live",
+            "icon": "https://radiosindia.com/images/foxfm.jpg",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb3CLqjk4WdcWCZyUFGhtL3Qlk0wHBT6iD2g&usqp=CAU",
+            "lang": "English",
+            "category": "hip-hop",
+            "order": 4
+        },
+        {
+            "id": 5,
+            "name": "95",
+            "tagline": "London UK Asian Music",
+            "color": "0xff0d487d",
+            "desc": "",
+            "url": "http://mediaserv30.live-streams.nl:8000/live",
+            "icon": "https://static.radio.net/images/broadcasts/5d/9c/37907/1/c175.png",
+            "image": "https://images.pexels.com/photos/164936/pexels-photo-164936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "lang": "English",
+            "category": "jazz",
+            "order": 5
+        },
+        {
+            "id": 6,
+            "name": "94",
+            "tagline": "Today's Hits",
+            "color": "0xff27383e",
+            "desc": "",
+            "url": "http://mediaserv30.live-streams.nl:8088/live",
+            "icon": "https://static.radio.net/images/broadcasts/8d/76/3600/1/c175.png",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsG9LKRI-lPdxNaxEUcEmohAG79Mppiz83GIKsi_efOxvX5n0iaerZuvQ9Lj5jCiMYnZM&usqp=CAU",
+            "lang": "English",
+            "category": "rock",
+            "order": 6
+        },
+        {
+            "id": 7,
+            "name": "93",
+            "tagline": "Love Songs",
+            "color": "0xffa06a37",
+            "desc": "The brain responds to music the same way it responds to something that you eat.",
+            "url": "http://mediaserv38.live-streams.nl:8027/live",
+            "icon": "https://mytuner.global.ssl.fastly.net/media/tvos_radios/4evkagl48buu.jpeg",
+            "image": "https://i.bollywoodmantra.com/albums/wallpapers/kismat-konnection/shahid-kapur_vidya-balan___34541.jpg",
+            "lang": "Hindi",
+            "category": "pop",
+            "order": 7
+        },
+        {
+            "id": 8,
+            "name": "107",
+            "tagline": "Rocking Retro Hits",
+            "color": "0xff090909",
+            "desc": "Your heartbeat changes to mimics the music you listen to.",
+            "url": "http://mediaserv21.live-streams.nl:8000/live",
+            "icon": "https://mytuner.global.ssl.fastly.net/media/tvos_radios/uvclzz6a6d7x.jpeg",
+            "image": "https://i.pinimg.com/originals/7f/f6/13/7ff613ed815f1eb56a90794ec64eecfe.jpg",
+            "lang": "Hindi",
+            "category": "classic",
+            "order": 8
+        }
+    ]
+}
